@@ -89,6 +89,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VisualScripting.Share
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Common.Runtime", "Unity.2D.Common.Runtime.csproj", "{C7098978-86CB-5AC8-FCC7-3F60AE6CF37B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{C6AD2D85-E33F-A78B-311F-1484E73A0EA3}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InputSystem.DocCodeSamples", "Unity.InputSystem.DocCodeSamples.csproj", "{E86B5A74-CAD3-4965-A259-9877F1855638}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptablePacker", "ScriptablePacker.csproj", "{6B42D64F-7A52-8A6B-F88D-AB7E644C4871}"
@@ -279,6 +281,10 @@ Global
 		{C7098978-86CB-5AC8-FCC7-3F60AE6CF37B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7098978-86CB-5AC8-FCC7-3F60AE6CF37B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7098978-86CB-5AC8-FCC7-3F60AE6CF37B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6AD2D85-E33F-A78B-311F-1484E73A0EA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6AD2D85-E33F-A78B-311F-1484E73A0EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6AD2D85-E33F-A78B-311F-1484E73A0EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6AD2D85-E33F-A78B-311F-1484E73A0EA3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E86B5A74-CAD3-4965-A259-9877F1855638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E86B5A74-CAD3-4965-A259-9877F1855638}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E86B5A74-CAD3-4965-A259-9877F1855638}.Release|Any CPU.ActiveCfg = Release|Any CPU
