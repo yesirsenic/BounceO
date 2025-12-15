@@ -1,5 +1,6 @@
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
@@ -12,7 +13,12 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        if(Mouse.current != null && Mouse.current.leftButton.isPressed)
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
+        if (Mouse.current != null && Mouse.current.leftButton.isPressed)
         {
             float touchX = Mouse.current.position.ReadValue().x;
             float screenCenterX = Screen.width * 0.5f;

@@ -7,6 +7,10 @@ public class BallMovement : MonoBehaviour
 
     Rigidbody2D rb;
 
+    //시간 관련
+    float lastScoreTime = -999f;
+    float scoreCooldown = 0.1f;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -43,21 +47,54 @@ public class BallMovement : MonoBehaviour
 
     void VelocityIncrease()
     {
-        speed += 0.01f;
+        speed += 0.05f;
+    }
+
+    void ScoreUp()
+    {
+        if (Time.time - lastScoreTime < scoreCooldown)
+            return;
+
+        lastScoreTime = Time.time;
+
+        GameManager.Instance.Score++;
+    }
+
+    public void InitSpeed()
+    {
+        speed = 1.5f;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Vector2 normal = collision.contacts[0].normal;
+        if(collision.gameObject.tag == "Bar")
+        {
+            Vector2 normal = collision.contacts[0].normal;
 
-        Vector2 incoming = rb.linearVelocity.normalized;
+            Vector2 incoming = rb.linearVelocity.normalized;
 
-        Vector2 reflected = Vector2.Reflect(incoming, normal);
+            Vector2 reflected = Vector2.Reflect(incoming, normal);
 
-        float pushStrength = 2f;
-        Vector2 finalDir = (reflected + normal * pushStrength).normalized;
+            float pushStrength = 2f;
+            Vector2 finalDir = (reflected + normal * pushStrength).normalized;
 
-        rb.linearVelocity = finalDir * speed;
+            rb.linearVelocity = finalDir * speed;
+
+            ScoreUp();
+        }
+
+        if (collision.gameObject.tag == "GameEnd")
+        {
+            this.gameObject.SetActive(false);
+
+            this.gameObject.transform.position = new Vector2(0, 1);
+
+            GameManager.Instance.GameEnd();
+        }
+
+
+
+
     }
 
 
