@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
     public int Score = 0;
     public int BestScore = 0;
 
+    public bool MusicOn = true;
+
     private void Update()
     {
         GameManage();

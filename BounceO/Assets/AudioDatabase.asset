@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea985bb4f40a096419d0abe6a236bccb, type: 3}
+  m_Name: AudioDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::AudioDatabase
+  sounds:
+  - key: ButtonClick
+    clip: {fileID: 8300000, guid: 8dee952d27287184383fd4ba49193817, type: 3}
+  - key: Collider
+    clip: {fileID: 8300000, guid: e549c8fb883495b4d919a70103d18865, type: 3}
+  - key: GameOver
+    clip: {fileID: 8300000, guid: 4db3b170d9d74104ab00a9a0d2372f78, type: 3}

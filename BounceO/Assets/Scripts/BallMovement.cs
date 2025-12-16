@@ -80,6 +80,8 @@ public class BallMovement : MonoBehaviour
 
             rb.linearVelocity = finalDir * speed;
 
+            AudioManager.Instance.Play("Collider");
+
             ScoreUp();
         }
 
@@ -88,6 +90,8 @@ public class BallMovement : MonoBehaviour
             this.gameObject.SetActive(false);
 
             this.gameObject.transform.position = new Vector2(0, 1);
+
+            AudioManager.Instance.Play("GameOver");
 
             GameManager.Instance.GameEnd();
         }
