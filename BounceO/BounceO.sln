@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.PlasticSCM.Editor", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Aseprite.Editor", "Unity.2D.Aseprite.Editor.csproj", "{590AFADA-297C-3950-9BA9-A59956CAC833}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Purchasing", "Unity.Purchasing.csproj", "{241BA534-66B4-95B1-C267-2F1F6BF679A6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Services.Core.Internal", "Unity.Services.Core.Internal.csproj", "{2EFF6BD5-1855-8A44-75A3-E3C60D022484}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Purchasing", "Unity.Purchasing.csproj", "{241BA534-66B4-95B1-C267-2F1F6BF679A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Mathematics", "Unity.Mathematics.csproj", "{0AE7FD09-5A5D-28E2-E253-9BAB245C5F5E}"
 EndProject
@@ -171,14 +171,14 @@ Global
 		{590AFADA-297C-3950-9BA9-A59956CAC833}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{590AFADA-297C-3950-9BA9-A59956CAC833}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{590AFADA-297C-3950-9BA9-A59956CAC833}.Release|Any CPU.Build.0 = Release|Any CPU
-		{241BA534-66B4-95B1-C267-2F1F6BF679A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{241BA534-66B4-95B1-C267-2F1F6BF679A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{241BA534-66B4-95B1-C267-2F1F6BF679A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{241BA534-66B4-95B1-C267-2F1F6BF679A6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2EFF6BD5-1855-8A44-75A3-E3C60D022484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2EFF6BD5-1855-8A44-75A3-E3C60D022484}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EFF6BD5-1855-8A44-75A3-E3C60D022484}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EFF6BD5-1855-8A44-75A3-E3C60D022484}.Release|Any CPU.Build.0 = Release|Any CPU
+		{241BA534-66B4-95B1-C267-2F1F6BF679A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{241BA534-66B4-95B1-C267-2F1F6BF679A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{241BA534-66B4-95B1-C267-2F1F6BF679A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{241BA534-66B4-95B1-C267-2F1F6BF679A6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0AE7FD09-5A5D-28E2-E253-9BAB245C5F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0AE7FD09-5A5D-28E2-E253-9BAB245C5F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AE7FD09-5A5D-28E2-E253-9BAB245C5F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU

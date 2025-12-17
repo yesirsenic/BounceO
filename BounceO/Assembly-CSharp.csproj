@@ -614,16 +614,16 @@
       <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@74deb55db2a0\Runtime\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@d78732e851eb\Mono.Cecil.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>Library\PackageCache\com.unity.collections@d49facba0036\Unity.Collections.Tests\System.Runtime.CompilerServices.Unsafe\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@74deb55db2a0\Runtime\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
@@ -1296,10 +1296,6 @@
       <Project>{9222E387-CBC7-9BCB-ADB2-24E34654A2F6}</Project>
       <Name>Unity.Purchasing.Utilities</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Burst.Editor.csproj">
-      <Project>{EA0DB47E-B654-AAE8-E451-C575EA4FE236}</Project>
-      <Name>Unity.Burst.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Purchasing.Stores.csproj">
       <Project>{33F7F189-6B17-7CC0-484A-E03512820D30}</Project>
       <Name>Unity.Purchasing.Stores</Name>
@@ -1315,6 +1311,10 @@
     <ProjectReference Include="Unity.Services.Core.Components.csproj">
       <Project>{586FBD1A-D0DB-4303-12CD-809E71D00C68}</Project>
       <Name>Unity.Services.Core.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Editor.csproj">
+      <Project>{EA0DB47E-B654-AAE8-E451-C575EA4FE236}</Project>
+      <Name>Unity.Burst.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Aseprite.Common.csproj">
       <Project>{79984407-F552-113A-2CAF-0A1793943F5D}</Project>
@@ -1384,13 +1384,13 @@
       <Project>{5A5AAE6A-DB3B-4AD7-1D8E-D2528BDF2C2D}</Project>
       <Name>Unity.VisualScripting.State.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{0AE7FD09-5A5D-28E2-E253-9BAB245C5F5E}</Project>
-      <Name>Unity.Mathematics</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Purchasing.SecurityCore.csproj">
       <Project>{5657379F-8D0B-B1BD-E5B7-1B22A6BAB8BD}</Project>
       <Name>Unity.Purchasing.SecurityCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{0AE7FD09-5A5D-28E2-E253-9BAB245C5F5E}</Project>
+      <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Environments.csproj">
       <Project>{9E2766F6-4485-A021-0C33-D23A053DA4A6}</Project>

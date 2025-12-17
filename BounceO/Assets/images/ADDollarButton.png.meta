@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 80f2e0e360c44844e987d3831f1b64a7
+guid: 37c1e725851682e4cb7dccecd06490d3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7837094397287949334
-    second: ADdollar_button_0
+      213: 5248458359389265613
+    second: ADDollarButton_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ADdollar_button_0
+      name: ADDollarButton_0
       rect:
         serializedVersion: 2
         x: 0
         y: 5
         width: 722
-        height: 336
+        height: 337
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aeb927a1b2c0d3390800000000000000
-      internalID: -7837094397287949334
+      spriteID: dce93d1021546d840800000000000000
+      internalID: 5248458359389265613
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ADdollar_button_0: -7837094397287949334
+      ADDollarButton_0: 5248458359389265613
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
