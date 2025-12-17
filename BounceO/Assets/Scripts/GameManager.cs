@@ -39,15 +39,24 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Text BestScore_Text;
 
+    [SerializeField]
+    private GameObject NOAD_Button;
+
+    [SerializeField]
+    private GameObject NOAD_Popup;
+
     public enum GameState
     {
         Ready, InGame, End
     }
 
+    private const int AD_INTERVAL = 2;
+
     public GameState state = GameState.Ready;
     public GameState prevState = GameState.Ready;
     public int Score = 0;
     public int BestScore = 0;
+    public int deathCount = 0;
 
     public bool MusicOn = true;
 
@@ -56,6 +65,8 @@ public class GameManager : MonoBehaviour
         GameManage();
         ChangeScore();
         ChangeBestScore();
+
+        RefreshUI();
     }
 
     private void GameManage()
@@ -84,6 +95,16 @@ public class GameManager : MonoBehaviour
 
             prevState = state;
         }
+    }
+
+    private void RefreshUI()
+    {
+        if (NOAD_Button.activeSelf == false)
+            return;
+
+        bool noAds = PlayerPrefs.GetInt("NO_ADS", 0) == 1;
+        NOAD_Button.gameObject.SetActive(!noAds);
+        NOAD_Popup.gameObject.SetActive(!noAds);
     }
 
     public void ChangeState(GameState changestate)
@@ -132,7 +153,14 @@ public class GameManager : MonoBehaviour
 
         Start_Button.SetActive(true);
 
-        //여기에 3회 시 광고 이런거 넣을 듯
+        deathCount++;
+
+        if(deathCount >= AD_INTERVAL)
+        {
+            deathCount = 0;
+
+            AdManager.Instance.ShowInterstitial();
+        }
 
     }
 
