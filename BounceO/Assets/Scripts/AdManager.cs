@@ -9,13 +9,12 @@ public class AdManager : MonoBehaviour
 
     private InterstitialAd interstitialAd;
 
+    private bool noAdsCached;
+
     private const string INTERSTITIAL_ID =
         "ca-app-pub-3940256099942544/1033173712";
 
-    public bool NoAds
-    {
-        get { return PlayerPrefs.GetInt("NO_ADS", 0) == 1; }
-    }
+    public bool NoAds => noAdsCached;
 
     private void Awake()
     {
@@ -27,6 +26,8 @@ public class AdManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        noAdsCached = PlayerPrefs.GetInt("NO_ADS", 0) == 1;
     }
 
     private void Start()
@@ -90,6 +91,11 @@ public class AdManager : MonoBehaviour
         {
             LoadInterstitial();
         }
+    }
+
+    public void SetNoAds(bool value)
+    {
+        noAdsCached = value;
     }
 
 }

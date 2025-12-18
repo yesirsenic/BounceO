@@ -13,13 +13,17 @@ public class IAPManager : MonoBehaviour
 
     private const string PREF_NO_ADS = "NO_ADS";
 
-    public bool NoAdsOwned => PlayerPrefs.GetInt(PREF_NO_ADS, 0) == 1;
+    private bool noAdsCached;
 
-    private void wake()
+    public bool NoAdsOwned => noAdsCached;
+
+    private void Awake()
     {
-        if (Instance! != null) { Destroy(gameObject); return; }
+        if (Instance != null) { Destroy(gameObject); return; }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        noAdsCached = PlayerPrefs.GetInt(PREF_NO_ADS, 0) == 1;
 
     }
 
@@ -98,6 +102,9 @@ public class IAPManager : MonoBehaviour
     {
         PlayerPrefs.SetInt(PREF_NO_ADS, 1);
         PlayerPrefs.Save();
+
+        noAdsCached = true;
+        AdManager.Instance.SetNoAds(true);
         Debug.Log("NoAds unlocked!");
     }
 
