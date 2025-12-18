@@ -47,7 +47,7 @@ public class BallMovement : MonoBehaviour
 
     void VelocityIncrease()
     {
-        speed += 0.05f;
+        speed += 0.025f;
     }
 
     void ScoreUp()
@@ -63,6 +63,7 @@ public class BallMovement : MonoBehaviour
     public void InitSpeed()
     {
         speed = 1.5f;
+        CancelInvoke("VelocityIncrease");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        
+
+        Application.targetFrameRate = 60;
+
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -103,7 +105,10 @@ public class GameManager : MonoBehaviour
 
         bool noAds = PlayerPrefs.GetInt("NO_ADS", 0) == 1;
         NOAD_Button.gameObject.SetActive(!noAds);
-        NOAD_Popup.gameObject.SetActive(!noAds);
+        if(noAds)
+        {
+            NOAD_Popup.SetActive(false);
+        }
     }
 
     public void ChangeState(GameState changestate)
