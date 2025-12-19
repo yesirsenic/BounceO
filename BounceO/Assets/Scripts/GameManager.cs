@@ -46,6 +46,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject NOAD_Popup;
 
+    [SerializeField]
+    private GameObject black_Pannel;
+
     public enum GameState
     {
         Ready, InGame, End
@@ -108,6 +111,8 @@ public class GameManager : MonoBehaviour
         if(noAds)
         {
             NOAD_Popup.SetActive(false);
+            black_Pannel.SetActive(false);
+
         }
     }
 

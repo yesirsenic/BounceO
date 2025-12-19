@@ -2386,6 +2386,7 @@ MonoBehaviour:
   BestScore_Text: {fileID: 1325945746}
   NOAD_Button: {fileID: 1577225158}
   NOAD_Popup: {fileID: 1944767133}
+  black_Pannel: {fileID: 692015061}
   state: 0
   prevState: 0
   Score: 0

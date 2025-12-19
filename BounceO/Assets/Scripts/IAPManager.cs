@@ -131,6 +131,9 @@ public class IAPManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("NO_ADS", 1);
         PlayerPrefs.Save();
+
+        noAdsCached = true;
+        AdManager.Instance.SetNoAds(true);
         Debug.Log("NoAds DEBUG unlocked");
     }
 }
