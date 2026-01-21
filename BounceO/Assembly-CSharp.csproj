@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\BallMovement.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
+    <Compile Include="Assets\Scripts\BannerAd.cs" />
     <Compile Include="Assets\Scripts\IAPManager.cs" />
     <Compile Include="Assets\Scripts\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\AudioEntry.cs" />
@@ -1316,6 +1317,10 @@
       <Project>{79984407-F552-113A-2CAF-0A1793943F5D}</Project>
       <Name>Unity.2D.Aseprite.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="UnityEngine.Advertisements.csproj">
+      <Project>{9CEBD827-8A5D-C4A7-AA11-D056E8033F95}</Project>
+      <Name>UnityEngine.Advertisements</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{62C3D453-8F48-2266-54F4-1F75805F61DB}</Project>
       <Name>Unity.Rider.Editor</Name>
@@ -1399,6 +1404,10 @@
     <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
       <Project>{E34CCC10-D769-1DDD-EE2F-EA1E5C709A99}</Project>
       <Name>Unity.VisualScripting.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.Advertisements.Editor.csproj">
+      <Project>{A5B33FA1-7A77-53E3-0304-460022B7A658}</Project>
+      <Name>UnityEngine.Advertisements.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{AA6BDB87-DED3-AA8A-1710-F162B61E6103}</Project>
