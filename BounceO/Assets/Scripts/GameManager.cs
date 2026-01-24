@@ -112,6 +112,7 @@ public class GameManager : MonoBehaviour
         {
             NOAD_Popup.SetActive(false);
             black_Pannel.SetActive(false);
+            BannerAd.Instance?.Hide();
 
         }
     }

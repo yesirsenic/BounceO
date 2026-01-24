@@ -12,7 +12,7 @@ public class AdManager : MonoBehaviour
     private bool noAdsCached;
 
     private const string INTERSTITIAL_ID =
-        "ca-app-pub-3940256099942544/1033173712";
+        "ca-app-pub-9548284037151614/6537725160";
 
     public bool NoAds => noAdsCached;
 

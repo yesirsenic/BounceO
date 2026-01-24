@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+ï»¿using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Purchasing;
@@ -77,16 +77,15 @@ public class IAPManager : MonoBehaviour
     {
         if (OrderContainsProductId(pendingOrder, PRODUCT_NO_ADS))
         {
-            GrantNoAds();
+            Debug.Log("No Ads purchase pending...");
+            // âŒ GrantNoAds() ì ˆëŒ€ ê¸ˆì§€
         }
-
-        // Áß¿ä: PendingOrder´Â Á÷Á¢ ConfirmPurchase ÇØÁà¾ß Æ®·£Àè¼ÇÀÌ ¸¶¹«¸®µÊ
         _store.ConfirmPurchase(pendingOrder); // :contentReference[oaicite:7]{index=7}
     }
 
     private bool OrderContainsProductId(Order order, string productId)
     {
-        // order.Info.PurchasedProductInfo[*].productId ·Î È®ÀÎ
+        // order.Info.PurchasedProductInfo[*].productId ë¡œ í™•ì¸
         var list = order.Info?.PurchasedProductInfo; // :contentReference[oaicite:8]{index=8}
         if (list == null) return false;
 
@@ -106,9 +105,10 @@ public class IAPManager : MonoBehaviour
         noAdsCached = true;
         AdManager.Instance.SetNoAds(true);
         Debug.Log("NoAds unlocked!");
+        BannerAd.Instance.Hide();
     }
 
-    // ¡°±¤°í Á¦°Å ±¸¸Å¡± ¹öÆ° OnClick¿¡ ÀÌ°É ¿¬°áÇÏ¸é µÊ
+    // â€œê´‘ê³  ì œê±° êµ¬ë§¤â€ ë²„íŠ¼ OnClickì— ì´ê±¸ ì—°ê²°í•˜ë©´ ë¨
     public void BuyNoAds()
     {
         if (_store == null)
@@ -117,16 +117,17 @@ public class IAPManager : MonoBehaviour
             return;
         }
 
-        _store.PurchaseProduct(PRODUCT_NO_ADS); // v5¿¡¼­ productId·Î ¹Ù·Î ±¸¸Å °¡´É :contentReference[oaicite:9]{index=9}
+        _store.PurchaseProduct(PRODUCT_NO_ADS); // v5ì—ì„œ productIdë¡œ ë°”ë¡œ êµ¬ë§¤ ê°€ëŠ¥ :contentReference[oaicite:9]{index=9}
     }
 
     public void RestorePurchases()
     {
         if (_store == null) return;
-        _store.RestoreTransactions((ok, msg) => Debug.Log($"Restore result: {ok}, {msg}")); // :contentReference[oaicite:10]{index=10}
+        _store.RestoreTransactions((ok, msg) => Debug.Log($"Restore result: {ok}, {msg}"));
     }
 
-    //¿¡µğÅÍ Å×½ºÆ®¿ë
+
+    //ì—ë””í„° í…ŒìŠ¤íŠ¸ìš©
     public void DebugUnlockNoAds()
     {
         PlayerPrefs.SetInt("NO_ADS", 1);
@@ -137,3 +138,4 @@ public class IAPManager : MonoBehaviour
         Debug.Log("NoAds DEBUG unlocked");
     }
 }
+
