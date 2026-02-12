@@ -1,0 +1,23 @@
+# ninja log v5
+8	1751	7909388367291492	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	d54c9a026161892d
+50	222	7909388352053615	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	37c01c620e30b78d
+32	1458	7909388364359427	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	182d8e3c507b7f55
+222	391	7909388353625304	D:/Github/BounceO/BounceO/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/106ry5d7/obj/arm64-v8a/libswappywrapper.so	4d0b77dc2002ab60
+45	1599	7909388365775932	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a7fdf956287332df
+14	1445	7909388364226523	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	84c433fc180f57e8
+22	1448	7909388364226523	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	4446ca4c9c6cc87d
+18	1518	7909388364955400	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ca975b1f9e6f3166
+27	1466	7909388364446967	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	b8091dfe218f0851
+38	1681	7909388366614727	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	126c0b31fb0ba642
+1751	1956	7909388369361514	D:/Github/BounceO/BounceO/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/106ry5d7/obj/arm64-v8a/libgame.so	2b4cae31d73816eb
+54	233	7911905685282154	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	37c01c620e30b78d
+234	468	7911905687384326	D:/Github/BounceO/BounceO/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/106ry5d7/obj/arm64-v8a/libswappywrapper.so	4d0b77dc2002ab60
+38	1438	7911905697226653	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	182d8e3c507b7f55
+24	1447	7911905697347155	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	4446ca4c9c6cc87d
+43	1472	7911905697623719	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	b8091dfe218f0851
+20	1486	7911905697744198	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	84c433fc180f57e8
+28	1545	7911905698318875	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ca975b1f9e6f3166
+48	1650	7911905699343103	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a7fdf956287332df
+33	1840	7911905701291706	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	126c0b31fb0ba642
+15	1995	7911905702820707	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	d54c9a026161892d
+1995	2323	7911905706131150	D:/Github/BounceO/BounceO/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/106ry5d7/obj/arm64-v8a/libgame.so	2b4cae31d73816eb

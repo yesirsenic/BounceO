@@ -1,21 +1,19 @@
-﻿using UnityEngine;
-using UnityEngine.Advertisements;
+using UnityEngine;
+using GoogleMobileAds.Api;
 
-public class BannerAd : MonoBehaviour, IUnityAdsInitializationListener
+public class BannerAd : MonoBehaviour
 {
     public static BannerAd Instance;
 
+    private BannerView bannerView;
+
 #if UNITY_ANDROID
-    private const string GAME_ID = "6030229";
-    private const string BANNER_ID = "Banner_Android";
+    private const string BANNER_ID = "ca-app-pub-9548284037151614/6682984808";
 #elif UNITY_IOS
-    private const string GAME_ID = "YOUR_IOS_GAME_ID";
-    private const string BANNER_ID = "Banner_iOS";
+    private const string BANNER_ID = "ca-app-pub-XXXXXXXXXX/IIIIIIIIII";
 #endif
 
-    private bool isInitialized = false;
-
-    void Awake()
+    private void Awake()
     {
         if (Instance != null)
         {
@@ -25,58 +23,45 @@ public class BannerAd : MonoBehaviour, IUnityAdsInitializationListener
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
-        Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
-
-        if (!Advertisement.isInitialized)
-        {
-            Advertisement.Initialize(GAME_ID, false, this);
-        }
-        else
-        {
-            isInitialized = true;
-        }
     }
 
-    
-    public void OnInitializationComplete()
+    private void Start()
     {
-        Debug.Log("Unity Ads Initialized");
-        isInitialized = true;
-
-        Show(); 
-    }
-
-    public void OnInitializationFailed(
-        UnityAdsInitializationError error,
-        string message)
-    {
-        Debug.LogError($"Ads Init Failed: {error} - {message}");
+        Show();
     }
 
     public void Show()
     {
-        if (!isInitialized)
-        {
-            Debug.Log("Ads not initialized yet");
+        if (PlayerPrefs.GetInt("NO_ADS", 0) == 1)
             return;
-        }
 
-        Advertisement.Banner.Load(BANNER_ID, new BannerLoadOptions
-        {
-            loadCallback = () =>
-            {
-                Advertisement.Banner.Show(BANNER_ID);
-            },
-            errorCallback = (error) =>
-            {
-                Debug.Log("Banner Load Error: " + error);
-            }
-        });
+        if (bannerView != null)
+            return;
+
+        bannerView = new BannerView(
+            BANNER_ID,
+            AdSize.Banner,
+            AdPosition.Bottom
+        );
+
+        var request = new AdRequest();
+        bannerView.LoadAd(request);
     }
 
     public void Hide()
     {
-        Advertisement.Banner.Hide();
+        if (bannerView != null)
+        {
+            bannerView.Hide();
+        }
+    }
+
+    public void DestroyBanner()
+    {
+        if (bannerView != null)
+        {
+            bannerView.Destroy();
+            bannerView = null;
+        }
     }
 }

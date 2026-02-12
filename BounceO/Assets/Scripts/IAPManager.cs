@@ -126,16 +126,5 @@ public class IAPManager : MonoBehaviour
         _store.RestoreTransactions((ok, msg) => Debug.Log($"Restore result: {ok}, {msg}"));
     }
 
-
-    //에디터 테스트용
-    public void DebugUnlockNoAds()
-    {
-        PlayerPrefs.SetInt("NO_ADS", 1);
-        PlayerPrefs.Save();
-
-        noAdsCached = true;
-        AdManager.Instance.SetNoAds(true);
-        Debug.Log("NoAds DEBUG unlocked");
-    }
 }
 
